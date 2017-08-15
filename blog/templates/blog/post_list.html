@@ -11,22 +11,16 @@
 			<p> </p>
 			<h2>About Me</h3>
 			<p> This is me,Aniruddha Bhattacharjee,I am from India and currently pursuing my bachelor's degree in Computer Science and Engineering.I like cubing and know how to solve "The Rubik's mini" ,"The Rubik's Cube" and exploring "The Rubik's Revenge",I have a keen interest in knowing about World History and I watch a lot of TV series.</p>
-			<p>On technical side,I am interested in algorithms,Machine Learning and AI systems and hope to do further research in these fields. Here's my <a href = "https://www.facebook.com/aniruddha.bhattacharjee.18" style = "text-decoration : none"> Facebook Page.</a></p>
-			<div>
-				<h1><a href = "">Django Blog</a></h1>
-			</div>
-			
-			<div>
-				<p>Published on: 10:08:17,00:06am</p>
-				<h1><a href = "">My First Post</a></h1>
-				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-			</div>
-			
-			<div>
-				<p>Published on: 10:08:17,00:08am </p>
-				<h1><a href = "">My Second Post</a></h1>
-				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+			<p>On the technical side,I am interested in algorithms,Machine Learning and AI systems and hope to do further research in these fields. Here's my <a href = "https://www.facebook.com/aniruddha.bhattacharjee.18" style = "text-decoration : none"> Facebook Page.</a></p>
+			<p> </p>
+			<p> </p>
+			{% for post in posts %}
+				<div>
+					<p>published: {{ post.published_date }}</p>
+					<h1><a href="">{{ post.title }}</a></h1>
+					<p>{{ post.text|linebreaksbr }}</p>
+				</div>
+			{% endfor %}
 		
 		</body>
 	</html>
