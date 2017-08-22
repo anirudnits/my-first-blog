@@ -14,9 +14,9 @@
 			<p>On the technical side,I am interested in algorithms,Machine Learning and AI systems and hope to do further research in these fields. Here's my <a href = "https://www.facebook.com/aniruddha.bhattacharjee.18" style = "text-decoration : none"> Facebook Page.</a></p>
 			{% for post in posts %}
 				<div>
-					<p>published: {{ post.published_date }}</p>
-					<h1><a href="">{{ post.title }}</a></h1>
-					<p>{{ post.text|linebreaksbr }}</p>
+					<p> published : {{post.published_date}} </p>
+					<h1> <a href = ''>{{post.title}} </a> </h1>
+					<p> {{post.text|linebreaksbr }} </p>
 				</div>
 			{% endfor %}
 		
